@@ -1,0 +1,287 @@
+{
+	"info": {
+		"_postman_id": "3e97d615-5bad-407b-8793-08b85d633009",
+		"name": "DANS MULTI PRO",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "USER",
+			"item": [
+				{
+					"name": "CREATE",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"user test1\",\n    \"username\": \"usertest1\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "REGISTER",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"name\": \"user test1\",\n    \"username\": \"usertest1\",\n    \"password\": \"Oke123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/register",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "EDIT",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"usertest\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/users/625aad41dd82d4567aa6e999",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"625aad41dd82d4567aa6e999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "LIST",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/users",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DETAIL",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "localhost:4000/api/users/625aad41dd82d4567aa6e999",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"625aad41dd82d4567aa6e999"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"usertest\",\n    \"password\": \"password\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/users/625ab1532a3dcb184152997f",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"users",
+								"625ab1532a3dcb184152997f"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "AUTH",
+			"item": [
+				{
+					"name": "LOGIN",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"usertest1\",\n    \"password\": \"Oke123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/auth",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"auth"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "JOB",
+			"item": [
+				{
+					"name": "LIST JOB",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiZXlKcGRpSTZJa1JQVkd3M1NGcExkWEZMTTNwTVUxVWlMQ0psYm1OeWVYQjBaV1JFWVhSaElqb2lWRmxGZG1Wd05uazNVRTh5VUdGWE1XSm9TblZNYTBwa2RGSTBaVlkzZHpkcGIwWnVNa2xHYTI1bE1XSTVOVGN6Y2pKQlFqRmphUzlGZUZoR1lrcFdTRUZvU25ac1ZreHBRbVk0T0VKQk0zVm9XVnBaY0RoS2QyUkJRV1ZZUnpWQlpESTRUVkEwZWtFeFFYZHdTVFU1TmtOcU9HSjBkVTFyZUVkemIwcDFkM2RISzBRMllYQXdOVTl0ZUZnaUxDSmhkWFJvSWpvaVVXUkZiVU5NVlc0MWRsRXphMlpoV2tZclRGRmpkejA5SW4wPSIsImlhdCI6MTY1MDExNTM5OCwiZXhwIjoxNjUwMTE4OTk4LCJhdWQiOiJkYW5zbXVsdGlwcm8uY29tIiwiaXNzIjoiZGFuc211bHRpcHJvLmNvbSJ9.IwQgeUKtTCNNINDAeq_sgHWAD3tCYKYtL4yhwEF7k7w",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"username\": \"usertest1\",\n    \"password\": \"Oke123!\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "localhost:4000/api/jobs?page=2&description=java&size=10",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"jobs"
+							],
+							"query": [
+								{
+									"key": "search",
+									"value": "Senior Creative Front End Web Developer",
+									"disabled": true
+								},
+								{
+									"key": "page",
+									"value": "2"
+								},
+								{
+									"key": "description",
+									"value": "java"
+								},
+								{
+									"key": "size",
+									"value": "10"
+								}
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "JOB DETAIL",
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJkYXRhIjoiZXlKcGRpSTZJa1JQVkd3M1NGcExkWEZMTTNwTVUxVWlMQ0psYm1OeWVYQjBaV1JFWVhSaElqb2lWRmxGZG1Wd05uazNVRTh5VUdGWE1XSm9TblZNYTBwa2RGSTBaVlkzZHpkcGIwWnVNa2xHYTI1bE1XSTVOVGN6Y2pKQlFqRmphUzlGZUZoR1lrcFdTRUZvU25ac1ZreHBRbVk0T0VKQk0zVm9XVnBaY0RoS2QyUkJRV1ZZUnpWQlpESTRUVkEwZWtFeFFYZHdTVFU1TmtOcU9HSjBkVTFyZUVkemIwcDFkM2RISzBRMllYQXdOVTl0ZUZnaUxDSmhkWFJvSWpvaVVXUkZiVU5NVlc0MWRsRXphMlpoV2tZclRGRmpkejA5SW4wPSIsImlhdCI6MTY1MDExNTM5OCwiZXhwIjoxNjUwMTE4OTk4LCJhdWQiOiJkYW5zbXVsdGlwcm8uY29tIiwiaXNzIjoiZGFuc211bHRpcHJvLmNvbSJ9.IwQgeUKtTCNNINDAeq_sgHWAD3tCYKYtL4yhwEF7k7w",
+								"type": "text"
+							}
+						],
+						"url": {
+							"raw": "localhost:4000/api/jobs/32bf67e5-4971-47ce-985c-44b6b3860cdb",
+							"host": [
+								"localhost"
+							],
+							"port": "4000",
+							"path": [
+								"api",
+								"jobs",
+								"32bf67e5-4971-47ce-985c-44b6b3860cdb"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
