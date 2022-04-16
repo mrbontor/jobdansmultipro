@@ -1,0 +1,36 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "type": "object",
+    "required": [
+        "username",
+        "password"
+    ],
+    "properties": {
+        "username": {
+            "type": "string",
+            "minLength": 4,
+            "maxLength": 20,
+            "errorMessage": {
+                "minLength": "username should be greater than 4",
+                "maxLength": "username should be lesser than 20"
+            }
+        },
+        "password": {
+            "type": "string",
+            "minLength": 6,
+            "pattern": "^(?=.*?[A-Z])(?=.*?[a-z])(?=.*?[0-9])(?=.*?[#?!@$%^&*-]).{6,}$",
+            "errorMessage": {
+               "minLength": "password should be greater than 6",
+               "pattern": "password should be including 1 Uppercase, 1 number and 1 special character(#?!@$%^&*-)"
+            }
+        }
+    },
+    "additionalProperties": false,
+    "errorMessage": {
+        "type": "should be an object",
+        "required": {
+            "username": "username is required",
+            "password": "password is required"
+        }
+    }
+}
